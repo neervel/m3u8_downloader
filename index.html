@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        const a = `1.1,https://playlist.kinescopecdn.net/player/b7e4552ccce256974dbedd327cd96da7/ea0ad3ccb4bb0906b32b7d30c693ea4b/master.m3u8?user-cdn=integros&acc-id=343981&user-id=220062826&loc-mode=ru&version=5%3A2%3A1%3A0%3A2&consumer=vod&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyLWlkIjoyMjAwNjI4MjYsImNvbnN1bWVyIjoidm9kIn0.9zBx25SqugRt2Lsjekdq-yw3PK3fpvlFBilm-5FXQ78&gzipoff=1
+1.2,https://playlist.kinescopecdn.net/player/7ee752d143fc6e3c1a2c9dcca6002459/150f42e91ae71a4f049f0dee0d79a91e/master.m3u8?user-cdn=integros&acc-id=343981&user-id=220062826&loc-mode=ru&version=5%3A2%3A1%3A0%3A2&consumer=vod&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyLWlkIjoyMjAwNjI4MjYsImNvbnN1bWVyIjoidm9kIn0.9zBx25SqugRt2Lsjekdq-yw3PK3fpvlFBilm-5FXQ78&gzipoff=1
+1.3.1,https://playlist.kinescopecdn.net/player/3d97c26d72441125c32d876935df4394/da5c69aa0eac34d25e4f7d29469adaf5/master.m3u8?user-cdn=integros&acc-id=343981&user-id=220062826&loc-mode=ru&version=5%3A2%3A1%3A0%3A2&consumer=vod&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyLWlkIjoyMjAwNjI4MjYsImNvbnN1bWVyIjoidm9kIn0.9zBx25SqugRt2Lsjekdq-yw3PK3fpvlFBilm-5FXQ78&gzipoff=1
+1.3.1,https://playlist.kinescopecdn.net/player/a6186667fbc97e6bd707f16dc7747bb1/ea167c99c93b639e1bd1454f9383a48d/master.m3u8?user-cdn=integros&acc-id=343981&user-id=220062826&loc-mode=ru&version=5%3A2%3A1%3A0%3A2&consumer=vod&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyLWlkIjoyMjAwNjI4MjYsImNvbnN1bWVyIjoidm9kIn0.9zBx25SqugRt2Lsjekdq-yw3PK3fpvlFBilm-5FXQ78&gzipoff=1`;
+
+
+        function hello(a) {
+            const arr = a.split(`\n`);
+            arr.forEach(item => {
+                const l = item.split(',')
+                let newNode = document.createElement('a');
+                newNode.href = l[1];
+                newNode.download = 'aaaaaaa.m3u8';
+                newNode.textContent = 'Скачать'
+                document.getElementById('app').appendChild(newNode);
+            })
+        }
+    </script>
+</body>
+
+</html>
